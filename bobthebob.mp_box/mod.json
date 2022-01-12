@@ -1,7 +1,0 @@
-{
-	"Name" : "bobthebob.mp_box",
-	"Description": "mp_box potentially fixed",
-	"Version": "0.0.0",
-	"LoadPriority": 0,
-	"RequiredOnClient": true,
-}

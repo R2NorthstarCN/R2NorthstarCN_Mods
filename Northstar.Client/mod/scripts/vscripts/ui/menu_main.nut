@@ -25,6 +25,9 @@ global const int NS_DISAGREED_TO_SEND_TOKEN = 2
 
 void function InitMainMenu()
 {
+	string playerName
+	playerName = GetConVarString("name")
+	SetConVarString("ns_auth_player_name",playerName)
 	RegisterSignal( "EndOnMainMenu_Open" )
 
 	var menu = GetMenu( "MainMenu" )
@@ -70,9 +73,7 @@ void function InitMainMenu()
 
 void function OnMainMenu_Open()
 {	
-	string playerName
-	playerName = GetConVarString("name")
-	SetConVarString("ns_auth_player_name",playerName)
+	
 	Signal( uiGlobal.signalDummy, "EndOnMainMenu_Open" )
 	EndSignal( uiGlobal.signalDummy, "EndOnMainMenu_Open" )
 
